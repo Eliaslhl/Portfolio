@@ -23,7 +23,7 @@ const Objective = () => {
             result="Validé"
             des={
               <>
-                Passage en 2ème année de BUT
+                Passage en BUT 2 de BUT
                 <br />
                 <br />
                 Diriger une équipe
@@ -39,7 +39,7 @@ const Objective = () => {
             result="En cours"
             des={
               <>
-                Passage en 3ème année de BUT
+                Passage en BUT 3 de BUT
                 <br />
                 <br />
                 Diriger une équipe
@@ -62,7 +62,7 @@ const Objective = () => {
                 alternance
                 <br />
                 <br />
-                Passage en 1ère année en école d'ingénieur à l'ESIEE Paris
+                Passage en BUT 1 en école d'ingénieur à l'ESIEE Paris
               </>
             }
           />

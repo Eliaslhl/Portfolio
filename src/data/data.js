@@ -8,7 +8,7 @@ import React from "react";
 
 // Skills Data
 export const skillsData = {
-  "1ère année": [
+  "BUT 1": [
     {
       id: 1,
       icon: <SlNote />,
@@ -46,7 +46,7 @@ export const skillsData = {
       des: "Identifier ses aptitudes pour travailler dans une équipe.",
     },
   ],
-  "2ème année": [
+  "BUT 2": [
     {
       id: 1,
       icon: <SlNote />,
@@ -84,7 +84,7 @@ export const skillsData = {
       des: "Situer son rôle et ses missions au sein d'une équipe informatique.",
     },
   ],
-  "3ème année": [
+  "BUT 3": [
     {
       id: 1,
       icon: <SlNote />,

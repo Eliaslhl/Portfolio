@@ -4,7 +4,7 @@ import Card from "./Card";
 import { skillsData } from "../../data/data";
 
 const SkillsData = () => {
-  const [filter, setFilter] = useState("1ère année");
+  const [filter, setFilter] = useState("BUT 1");
 
   const filteredSkills = skillsData[filter] || [];
 
@@ -24,14 +24,14 @@ const SkillsData = () => {
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         >
-          <option value="1ère année" className="mb-2">
-            1ère année
+          <option value="BUT 1" className="mb-2">
+            BUT 1
           </option>
-          <option value="2ème année" className="mb-2">
-            2ème année
+          <option value="BUT 2" className="mb-2">
+            BUT 2
           </option>
-          <option value="3ème année" className="mb-2">
-            3ème année
+          <option value="BUT 3" className="mb-2">
+            BUT 3
           </option>
         </select>
       </div>
