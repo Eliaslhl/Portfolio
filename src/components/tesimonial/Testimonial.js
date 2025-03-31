@@ -1,12 +1,12 @@
-import React from 'react';
-import Title from '../layouts/Title';
+import React from "react";
+import Title from "../layouts/Title";
 import { Elias_lahlouh_CV } from "../../assets/index";
 
 const CV = () => {
   const handleDownload = () => {
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = Elias_lahlouh_CV;
-    link.download = 'Elias_lahlouh_CV.pdf';
+    link.download = "Elias_lahlouh_CV.pdf";
     link.click();
   };
 
@@ -27,6 +27,6 @@ const CV = () => {
       </button>
     </div>
   );
-}
+};
 
 export default CV;

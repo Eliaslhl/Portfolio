@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const HardSkills = () => {
   return (
@@ -56,7 +56,9 @@ const HardSkills = () => {
             </span>
           </div>
           <div className="overflow-x-hidden">
-            <p className="text-sm uppercase font-medium">Js Vanilla/Typescipt</p>
+            <p className="text-sm uppercase font-medium">
+              Js Vanilla/Typescipt
+            </p>
             <span className="w-full h-2 bgOpacity rounded-md inline-flex mt-2">
               <motion.span
                 initial={{ x: "-100%", opacity: 0 }}
@@ -85,8 +87,7 @@ const HardSkills = () => {
       </div>
 
       <div className="w-full lgl:w-1/2 mt-10">
-        <div className="py-12 font-titleFont flex flex-col gap-4 mt-9">
-        </div>
+        <div className="py-12 font-titleFont flex flex-col gap-4 mt-9"></div>
         <div className="flex flex-col gap-6">
           <div className="overflow-x-hidden">
             <p className="text-sm uppercase font-medium">Java</p>
@@ -121,9 +122,9 @@ const HardSkills = () => {
                 initial={{ x: "-100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
-                className="w-[60%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
+                className="w-[70%] h-full bg-gradient-to-r from-blue-600 via-pink-500 to-red-500 rounded-md relative"
               >
-                <span className="absolute -top-7 right-0">60%</span>
+                <span className="absolute -top-7 right-0">70%</span>
               </motion.span>
             </span>
           </div>
@@ -157,6 +158,6 @@ const HardSkills = () => {
       </div>
     </motion.div>
   );
-}
+};
 
-export default HardSkills
+export default HardSkills;

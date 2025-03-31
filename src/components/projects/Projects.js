@@ -1,12 +1,11 @@
-import React from 'react'
-import Title from '../layouts/Title'
-import ProjectsCard from './ProjectsCard';
-import { projectOne } from '../../assets/index'
-import { projectTwo } from '../../assets/index'
-import { projectThree } from '../../assets/index'
-import { projectFour } from '../../assets/index'
-import { projectFive } from '../../assets/index'
-import { projectSix } from '../../assets/index'
+import React from "react";
+import Title from "../layouts/Title";
+import ProjectsCard from "./ProjectsCard";
+import { pro1, projectOne } from "../../assets/index";
+import { projectTwo } from "../../assets/index";
+import { projectThree } from "../../assets/index";
+import { projectFive } from "../../assets/index";
+import { projectSix } from "../../assets/index";
 
 const Projects = () => {
   return (
@@ -15,19 +14,22 @@ const Projects = () => {
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title
-          title=""
-          des="Projets"
-        />
+        <Title title="" des="Projets" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+        <ProjectsCard
+          title="ChillZone"
+          des="ChillZone est une application pour simplifier la vie des étudiants : réservez salles, box acoustiques ou repas en un clic, consultez votre emploi du temps et repérez-vous facilement sur le campus. Administrateurs et pros gèrent tout via un backoffice intuitif !"
+          src={pro1}
+          githubLink="https://github.com/FC-Zen/ChillZone"
+          websiteLink="https://github.com/FC-Zen/ChillZone"
+        />
         <ProjectsCard
           title="StarLetters"
           des="StarLetters est un jeu en ligne à un ou plusieurs joueurs basé sur les similarités entre mots. Chauqe joueur reçoit un mot de départ et un mot cible et propose des mots proches afin de créer une chaine de mots simialires."
           src={projectOne}
           githubLink="https://github.com/but2-sae-2023/StarLetters"
           websiteLink="https://perso-etudiant.u-pem.fr/~lucas.merlin/StarLetters/frontend/pages/index.php"
-
         />
         <ProjectsCard
           title="EuroEtoiles"
@@ -42,13 +44,6 @@ const Projects = () => {
           src={projectThree}
           githubLink="https://github.com/Eliaslhl/Portfolio"
           websiteLink="http://perso-etudiant.u-pem.fr/~elias.lahlouh/portfolio/index.html"
-        />
-        <ProjectsCard
-          title="Tic Tac Toe"
-          des="Le Tic Tac Toe est un jeu de société classique qui se joue sur une grille de 3x3 cases. Le jeu oppose deux joueurs, l'un utilisant des 'X' et l'autre des 'O'. Les joueurs alternent pour placer leur symbole dans une case vide de la grille. Le but du jeu est d'aligner trois symboles identiques horizontalement, verticalement ou en diagonale."
-          src={projectFour}
-          githubLink="https://github.com/Eliaslhl"
-          websiteLink="https://github.com/Eliaslhl"
         />
         <ProjectsCard
           title="DSD Bank"
@@ -67,6 +62,6 @@ const Projects = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Projects
+export default Projects;
