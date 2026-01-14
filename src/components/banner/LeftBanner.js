@@ -1,5 +1,5 @@
-import React from 'react'
-import Media from './Media';
+import React from "react";
+import Media from "./Media";
 
 const LeftBanner = () => {
   return (
@@ -8,16 +8,17 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-white">
           <span className="text-designColor capitalize">Elias LAHLOUH</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
-        </h2>
+        <h2 className="text-4xl font-bold text-white"></h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-        Etudiant à l'IUT de Champs-Sur-Marne.
-        Actuellement en BUT informatique, je souhaite m'orienter vers le monde professionnel de l'informatique, que ce soit dans le développement d'applications mobiles ou le développement web.
+          Etudiant à l'ESIEE Paris. Actuellement en E3FI informatique et
+          applications, je souhaite m'orienter vers le monde professionnel de
+          l'informatique, que ce soit dans le développement d'applications
+          mobiles ou le développement web.
         </p>
         <Media />
       </div>
     </div>
   );
-}
+};
 
-export default LeftBanner
+export default LeftBanner;

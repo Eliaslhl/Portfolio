@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosSchool } from "react-icons/io";
 import { SiGithub, SiTwitter } from "react-icons/si";
-import { MdMarkEmailRead } from 'react-icons/md';
+import { MdMarkEmailRead } from "react-icons/md";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import ThreeDModel from './ThreeDModel '; 
-import { lycoris } from '../../assets'; 
+import ThreeDModel from "./ThreeDModel ";
+import { lycoris } from "../../assets";
 
 const ContactLeft = () => {
   return (
@@ -17,7 +17,7 @@ const ContactLeft = () => {
         <h3 className="text-3xl font-bold text-white">Elias LAHLOUH</h3>
         <p className="text-base text-gray-400 flex items-center gap-2">
           <IoIosSchool />
-          <span className="text-lightText">Etudiant en BUT Informatique</span>
+          <span className="text-lightText">Etudiant à l'ESIEE Paris</span>
         </p>
         <p className="text-base text-gray-400 flex items-center gap-2">
           <IoPhonePortraitOutline />
@@ -31,12 +31,20 @@ const ContactLeft = () => {
       <div className="flex flex-col gap-0">
         <div className="flex gap-4">
           <span className="bannerIcon">
-            <a href="https://www.linkedin.com/in/elias-lahlouh-1332a1243/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/elias-lahlouh-1332a1243/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
           </span>
           <span className="bannerIcon">
-            <a href="https://github.com/Eliaslhl" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Eliaslhl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SiGithub />
             </a>
           </span>

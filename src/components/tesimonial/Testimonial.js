@@ -6,7 +6,7 @@ const CV = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = Elias_lahlouh_CV;
-    link.download = "Elias_lahlouh_CV.pdf";
+    link.download = "Elias_lahlouh_CV.jpg";
     link.click();
   };
 

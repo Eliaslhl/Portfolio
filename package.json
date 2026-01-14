@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^4.19.2",
     "framer-motion": "^8.4.2",
     "nodemailer": "^6.9.15",
@@ -27,6 +28,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node src/Server.js",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

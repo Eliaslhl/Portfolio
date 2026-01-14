@@ -1,7 +1,7 @@
 import logo from "./images/logo.jpeg";
 
 // projects
-import profilePhoto from "./images/profilePhoto.jpg";
+import profilePhoto from "./images/profilePhoto.jpeg";
 import projectOne from "./images/projects/projectOne.png";
 import projectTwo from "./images/projects/projectTwo.png";
 import projectThree from "./images/projects/projectThree.png";

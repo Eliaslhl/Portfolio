@@ -43,7 +43,7 @@ const Career = () => {
           <ResumeCard
             title="IUT Champs-Sur-Marne"
             subTitle="2 Rue Albert Einstein, 77420 Champs-sur-Marne"
-            result="En cours"
+            result="Validé"
             des={
               <>
                 Bachelor Universitaire de Technologie (BUT) Informatique
@@ -67,7 +67,7 @@ const Career = () => {
           <ResumeCard
             title="ESIEE Paris"
             subTitle="Cité Descartes, 2 Bd Blaise Pascal, 93160 Noisy-le-Grand"
-            result="Waiting"
+            result="En cours"
             des={
               <>
                 Ingénierie 3D et technologie des médias
@@ -127,7 +127,7 @@ const Career = () => {
           <ResumeCard
             title="Alternance Meilleurtaux"
             subTitle="36 Rue de Saint-Pétersbourg, 75008 Paris"
-            result="En cours"
+            result="Validé"
             des={
               <>
                 Développement d'une application mobile : du concept à la mise en
@@ -150,23 +150,25 @@ const Career = () => {
             }
           />
           <ResumeCard
-            title="Coming soon"
-            subTitle="Coming soon"
-            result="Coming soon"
+            title="Alternance RATP Smart Systems"
+            subTitle="Gare de Lyon, 75012 Paris - 11 Rue Courat 75020 Paris"
+            result="En cours"
             des={
               <>
-                Coming soon
+                Développement d'applications web sur les sites BonjourRATP et
+                Mappy.
                 <br />
                 <br />
-                Coming soon
+                Alternance de 36 mois au sein de RATP Smart Systems, en tant que
+                développeur front-end.
                 <br />
                 <br />
                 <u>
                   <a
-                    href="Coming soon"
+                    href="https://www.bonjour-ratp.fr/"
                     style={{ color: "rgb(255 1 79 / var(--tw-text-opacity))" }}
                   >
-                    Coming soon
+                    Bonjour RATP
                   </a>
                 </u>
               </>
