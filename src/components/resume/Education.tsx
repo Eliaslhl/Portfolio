@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ResumeCard from "./ResumeCard";
 
-const Career = () => {
+const Career: React.FC = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

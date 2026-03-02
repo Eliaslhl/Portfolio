@@ -7,7 +7,7 @@ import { projectThree } from "../../assets/index";
 import { projectFive } from "../../assets/index";
 import { projectSix } from "../../assets/index";
 
-const Projects = () => {
+const Projects: React.FC = () => {
   return (
     <section
       id="projects"

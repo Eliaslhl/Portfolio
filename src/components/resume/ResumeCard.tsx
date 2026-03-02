@@ -1,6 +1,12 @@
 import React from "react";
+import { ResumeCardProps } from "../../types";
 
-const ResumeCard = ({ title, subTitle, result, des }) => {
+const ResumeCard: React.FC<ResumeCardProps> = ({
+  title,
+  subTitle,
+  result,
+  des,
+}) => {
   return (
     <div className="w-full h-1/3 group flex">
       <div className="w-10 h-[6px] bgOpacity mt-16 relative">

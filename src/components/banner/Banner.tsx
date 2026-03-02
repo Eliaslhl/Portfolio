@@ -1,7 +1,8 @@
-import React from 'react'
-import LeftBanner from './LeftBanner';
-import RightBanner from './RightBanner';
-const Banner = () => {
+import React from "react";
+import LeftBanner from "./LeftBanner";
+import RightBanner from "./RightBanner";
+
+const Banner: React.FC = () => {
   return (
     <section
       id="Accueil"
@@ -11,6 +12,6 @@ const Banner = () => {
       <RightBanner />
     </section>
   );
-}
+};
 
-export default Banner
+export default Banner;

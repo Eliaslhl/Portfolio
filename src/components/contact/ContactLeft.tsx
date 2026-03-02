@@ -4,10 +4,10 @@ import { IoIosSchool } from "react-icons/io";
 import { SiGithub, SiTwitter } from "react-icons/si";
 import { MdMarkEmailRead } from "react-icons/md";
 import { IoPhonePortraitOutline } from "react-icons/io5";
-import ThreeDModel from "./ThreeDModel ";
+import ThreeDModel from "./ThreeDModel";
 import { lycoris } from "../../assets";
 
-const ContactLeft = () => {
+const ContactLeft: React.FC = () => {
   return (
     <div className="w-full lgl:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23272b] p-4 lgl:p-8 rounded-lg shadow-shadowOne flex flex-col gap-5 justify-center">
       <div className="w-full h-64 rounded-lg mb-2">

@@ -1,7 +1,7 @@
 import React from "react";
 import Media from "./Media";
 
-const LeftBanner = () => {
+const LeftBanner: React.FC = () => {
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">

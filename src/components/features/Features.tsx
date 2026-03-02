@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Title from "../layouts/Title";
 import Card from "./Card";
 import { skillsData } from "../../data/data";
+import { SkillItem } from "../../types";
 
-const SkillsData = () => {
-  const [filter, setFilter] = useState("BUT 1");
+const SkillsData: React.FC = () => {
+  const [filter, setFilter] = useState<string>("BUT 1");
 
-  const filteredSkills = skillsData[filter] || [];
+  const filteredSkills: SkillItem[] = skillsData[filter] || [];
 
   return (
     <section id="skillsData" className="w-full py-20 border-b border-b-black">

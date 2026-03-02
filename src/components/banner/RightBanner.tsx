@@ -1,7 +1,7 @@
 import React from "react";
 import { profilePhoto } from "../../assets/index";
 
-const RightBanner = () => {
+const RightBanner: React.FC = () => {
   return (
     <div className="w-full lgl:w-1/2 flex justify-center items-center relative">
       <img

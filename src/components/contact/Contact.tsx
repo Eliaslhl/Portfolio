@@ -1,72 +1,75 @@
-import React,{useState} from 'react'
-import Title from '../layouts/Title';
-import ContactLeft from './ContactLeft';
+import React, { useState } from "react";
+import Title from "../layouts/Title";
+import ContactLeft from "./ContactLeft";
 
-const Contact = () => {
-  const [username, setUsername] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [errMsg, setErrMsg] = useState("");
-  const [successMsg, setSuccessMsg] = useState("");
+const Contact: React.FC = () => {
+  const [username, setUsername] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [errMsg, setErrMsg] = useState<string>("");
+  const [successMsg, setSuccessMsg] = useState<string>("");
 
   // ========== Email Validation start here ==============
-  const emailValidation = () => {
+  const emailValidation = (): RegExpMatchArray | null => {
     return String(email)
       .toLocaleLowerCase()
       .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
-    };
-    // ========== Email Validation ================
+  };
+  // ========== Email Validation ================
 
-    const handleSend = async (e) => {
-      e.preventDefault();
-      if (username === "") {
-        setErrMsg("Le nom est requis !");
-      } else if (phoneNumber === "") {
-        setErrMsg("Le numéro de téléphone est requis !");
-      } else if (email === "") {
-        setErrMsg("Merci de renseigner votre Email !");
-      } else if (!emailValidation(email)) {
-        setErrMsg("Donnez une adresse Email valide !");
-      } else if (subject === "") {
-        setErrMsg("Merci de renseigner ce champs !");
-      } else if (message === "") {
-        setErrMsg("Un message est requis !");
-      } else {
-        try {
-          const response = await fetch('http://localhost:5000/send-email', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              username,
-              phoneNumber,
-              email,
-              subject,
-              message
-            }),
-          });
-    
-          if (response.ok) {
-            setSuccessMsg(`Merci ${username}, votre message a été envoyé avec succès !`);
-            setErrMsg("");
-            setUsername("");
-            setPhoneNumber("");
-            setEmail("");
-            setSubject("");
-            setMessage("");
-          } else {
-            setErrMsg('Une erreur est survenue lors de l\'envoi du message.');
-          }
-        } catch (error) {
-          setErrMsg('Une erreur est survenue lors de l\'envoi du message.');
+  const handleSend = async (
+    e: React.MouseEvent<HTMLButtonElement>,
+  ): Promise<void> => {
+    e.preventDefault();
+    if (username === "") {
+      setErrMsg("Le nom est requis !");
+    } else if (phoneNumber === "") {
+      setErrMsg("Le numéro de téléphone est requis !");
+    } else if (email === "") {
+      setErrMsg("Merci de renseigner votre Email !");
+    } else if (!emailValidation()) {
+      setErrMsg("Donnez une adresse Email valide !");
+    } else if (subject === "") {
+      setErrMsg("Merci de renseigner ce champs !");
+    } else if (message === "") {
+      setErrMsg("Un message est requis !");
+    } else {
+      try {
+        const response = await fetch("http://localhost:5000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            phoneNumber,
+            email,
+            subject,
+            message,
+          }),
+        });
+
+        if (response.ok) {
+          setSuccessMsg(
+            `Merci ${username}, votre message a été envoyé avec succès !`,
+          );
+          setErrMsg("");
+          setUsername("");
+          setPhoneNumber("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        } else {
+          setErrMsg("Une erreur est survenue lors de l'envoi du message.");
         }
+      } catch (error) {
+        setErrMsg("Une erreur est survenue lors de l'envoi du message.");
       }
-    };
-    
-    
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -96,7 +99,9 @@ const Contact = () => {
                     Nom
                   </p>
                   <input
-                    onChange={(e) => setUsername(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                      setUsername(e.target.value)
+                    }
                     value={username}
                     className={`${
                       errMsg === "Username is required!" &&
@@ -110,7 +115,9 @@ const Contact = () => {
                     Numéro de téléphone
                   </p>
                   <input
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                      setPhoneNumber(e.target.value)
+                    }
                     value={phoneNumber}
                     className={`${
                       errMsg === "Phone number is required!" &&
@@ -125,7 +132,9 @@ const Contact = () => {
                   Email
                 </p>
                 <input
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setEmail(e.target.value)
+                  }
                   value={email}
                   className={`${
                     errMsg === "Please give your Email!" &&
@@ -139,7 +148,9 @@ const Contact = () => {
                   Sujet
                 </p>
                 <input
-                  onChange={(e) => setSubject(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setSubject(e.target.value)
+                  }
                   value={subject}
                   className={`${
                     errMsg === "Plese give your Subject!" &&
@@ -153,13 +164,15 @@ const Contact = () => {
                   Message
                 </p>
                 <textarea
-                  onChange={(e) => setMessage(e.target.value)}
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                    setMessage(e.target.value)
+                  }
                   value={message}
                   className={`${
                     errMsg === "Message is required!" && "outline-designColor"
                   } contactTextArea`}
-                  cols="30"
-                  rows="8"
+                  cols={30}
+                  rows={8}
                 ></textarea>
               </div>
               <div className="w-full">
@@ -186,6 +199,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;

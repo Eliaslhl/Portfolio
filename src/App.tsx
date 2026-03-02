@@ -8,10 +8,10 @@ import Projects from "./components/projects/Projects";
 import Resume from "./components/resume/Resume";
 import CV from "./components/tesimonial/Testimonial";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="w-full h-auto bg-bodyColor text-lightText px-4">
-        <Navbar />
+      <Navbar />
       <div className="max-w-screen-xl mx-auto">
         <Banner />
         <Competences />
@@ -23,6 +23,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

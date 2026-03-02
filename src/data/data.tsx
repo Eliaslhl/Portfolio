@@ -5,9 +5,10 @@ import { SlLock } from "react-icons/sl";
 import { SlChart } from "react-icons/sl";
 import { SiGoogleoptimize } from "react-icons/si";
 import React from "react";
+import { SkillsData } from "../types";
 
 // Skills Data
-export const skillsData = {
+export const skillsData: SkillsData = {
   "BUT 1": [
     {
       id: 1,
